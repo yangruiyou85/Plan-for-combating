@@ -11,8 +11,8 @@ soup=BeautifulSoup(wb_data.text,'lxml')
 #print (soup)
 #pro_title=soup.select('.tbody.tr:nth-child > td.t')
 #pro_title=soup.select('.t')
-pro_title=soup.find_all('a')
-
+pro_title=soup.select('.t > a[target="_blank"]')[0].text
+print (pro_title)
 
 #print (pro_title)
 #print (pro_title)
